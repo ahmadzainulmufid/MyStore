@@ -18,16 +18,16 @@ pipeline {
         }
       }
     }
-    stage('Build') {
-      steps {
+stage('Build') {
+    steps {
         dir('D:/xampp/htdocs/mystore/') {
-          script {
-            echo 'Building Docker image...'
-            bat 'docker build -t ahmadzainulmufid/myStore:latest .'
-          }
+            script {
+                echo 'Building Docker image...'
+                bat 'docker build -t ahmadzainulmufid/mystore:latest .'
+            }
         }
-      }
     }
+}
     stage('Login to Docker Hub') {
       steps {
         script {
