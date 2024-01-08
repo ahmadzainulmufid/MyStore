@@ -23,7 +23,7 @@ pipeline {
         dir('D:/xampp/htdocs/mystore/') {
           script {
             echo 'Building Docker image...'
-            bat 'docker build -t ahmadzainulmufid/MyStore:latest .'
+            bat 'docker build -t ahmadzainulmufid/myStore:latest .'
           }
         }
       }
@@ -40,7 +40,7 @@ pipeline {
       steps {
           script {
             echo 'Pushing Docker image to Docker Hub...'
-            bat 'docker push ahmadzainulmufid/MyStore:latest'
+            bat 'docker push ahmadzainulmufid/myStore:latest'
         }
       }
     }
